@@ -1,11 +1,14 @@
 /**
  * Development configuration for the application server
- * @type {{directory: string, libraries: {}, modules: {}}}
+ * @type {{libraries: {}, directory: string, modules: {npm: {}, directory: {}}}}
  */
 module.exports = {
-    directory: './modules',
     libraries: {},
+    directory: './modules',
     modules: {
-        module: {}
+        npm: {},
+        directory: {
+            module: {}
+        }
     }
 };

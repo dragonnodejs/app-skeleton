@@ -8,8 +8,11 @@ module.exports = function (config) {
     for (var name in config.libraries) {
         services[name] = require(config.libraries[name]);
     }
-    for (var name in config.modules) {
-        require(config.directory + '/' + name)(services, config.modules[name]);
+    for (var name in config.modules.npm) {
+        require(name)(services, config.modules.npm[name]);
+    }
+    for (var name in config.modules.directory) {
+        require(config.directory + '/' + name)(services, config.modules.directory[name]);
     }
     return services;
 };
