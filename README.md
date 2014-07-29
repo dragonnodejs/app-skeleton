@@ -1,3 +1,5 @@
+![Travis CI](https://travis-ci.org/dragonnodejs/skeleton.svg?branch=master "Travis CI")
+
 # DragonNodejs
 - Develop modular and testable Node.js applications
 - Separate configuration and implementation of modules
