@@ -1,4 +1,5 @@
-![Travis CI](https://travis-ci.org/dragonnodejs/skeleton.svg?branch=master "Travis CI")
+[![Travis CI](https://travis-ci.org/dragonnodejs/skeleton.svg?branch=master "Travis CI")]
+    (https://travis-ci.org/dragonnodejs/skeleton)
 
 # DragonNodejs
 - Develop modular and testable Node.js applications
