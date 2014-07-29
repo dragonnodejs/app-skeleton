@@ -1,10 +1,10 @@
 /**
  * Development configuration for the application server
- * @type {{directory: string, requires: {}, modules: {}}}
+ * @type {{directory: string, libraries: {}, modules: {}}}
  */
 module.exports = {
     directory: './modules',
-    requires: {},
+    libraries: {},
     modules: {
         module: {}
     }

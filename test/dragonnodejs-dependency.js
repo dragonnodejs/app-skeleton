@@ -6,7 +6,7 @@ describe('dragonnodejs-dependency.js', function () {
 
     it('should have the library in the service container after loading library', function () {
         var config = {
-            requires: { assert: 'assert' }
+            libraries: { assert: 'assert' }
         };
         var services = dependency(config);
         assert.equal(typeof services.assert, 'function', 'services.assert should be a function');
@@ -14,7 +14,7 @@ describe('dragonnodejs-dependency.js', function () {
 
     it('should allow alias for a library', function () {
         var config = {
-            requires: { alias: 'assert' }
+            libraries: { alias: 'assert' }
         };
         var services = dependency(config);
         assert.equal(typeof services.assert, 'undefined', 'services.assert should be undefined');
@@ -23,7 +23,7 @@ describe('dragonnodejs-dependency.js', function () {
 
     it('should have much entries in the service container after loading libraries', function () {
         var config = {
-            requires: {
+            libraries: {
                 assert: 'assert',
                 alias: 'assert'
             }
