@@ -6,9 +6,7 @@ describe('dragonnodejs-dependency.js', function () {
 
     it('should have the library in the service container after loading library', function () {
         var config = {
-            libraries: { assert: 'assert' },
-            directory: '',
-            modules: { npm: {}, directory: {} }
+            libraries: { assert: 'assert' }
         };
         var services = dependency(config);
         assert.equal(typeof services.assert, 'function', 'services.assert should be a function');
@@ -16,9 +14,7 @@ describe('dragonnodejs-dependency.js', function () {
 
     it('should allow alias for a library', function () {
         var config = {
-            libraries: { alias: 'assert' },
-            directory: '',
-            modules: { npm: {}, directory: {} }
+            libraries: { alias: 'assert' }
         };
         var services = dependency(config);
         assert.equal(typeof services.assert, 'undefined', 'services.assert should be undefined');
@@ -30,9 +26,7 @@ describe('dragonnodejs-dependency.js', function () {
             libraries: {
                 assert: 'assert',
                 alias: 'assert'
-            },
-            directory: '',
-            modules: { npm: {}, directory: {} }
+            }
         };
         var services = dependency(config);
         assert.equal(typeof services.assert, 'function', 'services.alias should be a function');
@@ -48,7 +42,6 @@ describe('dragonnodejs-dependency.js', function () {
         var config = {
             directory: './test/modules',
             modules: {
-                npm: {},
                 directory: { defineservices: {} }
             }
         };
@@ -61,7 +54,6 @@ describe('dragonnodejs-dependency.js', function () {
         var config = {
             directory: './test/modules',
             modules: {
-                npm: {},
                 directory: {
                     defineservices: {},
                     useservices: {}
@@ -77,7 +69,6 @@ describe('dragonnodejs-dependency.js', function () {
         var config = {
             directory: './test/modules',
             modules: {
-                npm: {},
                 directory: {
                     usemodule: {
                         a: 'a',
@@ -90,4 +81,7 @@ describe('dragonnodejs-dependency.js', function () {
         assert.equal(services.module.a, 'a', 'module should have "a" from configuration');
         assert.equal(services.module.b, 'b', 'module should have "b" from configuration');
     });
+
+    // TODO: Implement tests, problem: can't use the directory in "./test"
+    xit('should use "." if directory is not given in the configuration', function () {});
 });
