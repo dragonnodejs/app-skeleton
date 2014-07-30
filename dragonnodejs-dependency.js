@@ -5,15 +5,19 @@
  */
 module.exports = function (config) {
     var services = {};
+    var npm = '';
+    if (config.npm) {
+        npm = config.npm + '/';
+    }
     if (config.libraries) {
         for (var name in config.libraries) {
-            services[name] = require(config.libraries[name]);
+            services[name] = require(npm + config.libraries[name]);
         }
     }
     if (config.modules) {
         if (config.modules.npm) {
             for (var name in config.modules.npm) {
-                require(name)(services, config.modules.npm[name]);
+                require(npm + name)(services, config.modules.npm[name]);
             }
         }
         if (config.modules.directory) {

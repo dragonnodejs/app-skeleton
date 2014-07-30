@@ -1,6 +1,6 @@
 /**
  * Development configuration for the application server
- * @type {{libraries: {}, directory: string, modules: {npm: {}, directory: {}}}}
+ * @type {{libraries: {}, npm: string, directory: string, modules: {npm: {}, directory: {}}}}
  */
 module.exports = {
     libraries: {},
