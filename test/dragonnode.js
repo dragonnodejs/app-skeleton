@@ -9,7 +9,8 @@ describe('dragonnode.js', function () {
         var config = {
             libraries: { assert: 'assert' }
         };
-        var services = dragonnodejs(config);
+        var services = {};
+        dragonnodejs(config, services);
         assert.equal(typeof services.assert, 'function', 'services.assert should be a function');
     });
 
@@ -17,7 +18,8 @@ describe('dragonnode.js', function () {
         var config = {
             libraries: { alias: 'assert' }
         };
-        var services = dragonnodejs(config);
+        var services = {};
+        dragonnodejs(config, services);
         assert.equal(typeof services.assert, 'undefined', 'services.assert should be undefined');
         assert.equal(typeof services.alias, 'function', 'services.alias should be a function');
     });
@@ -29,7 +31,8 @@ describe('dragonnode.js', function () {
                 alias: 'assert'
             }
         };
-        var services = dragonnodejs(config);
+        var services = {};
+        dragonnodejs(config, services);
         assert.equal(typeof services.assert, 'function', 'services.alias should be a function');
         assert.equal(typeof services.alias, 'function', 'services.alias should be a function');
     });
@@ -41,7 +44,8 @@ describe('dragonnode.js', function () {
                 npm: { defineservices: {} }
             }
         };
-        var services = dragonnodejs(config);
+        var services = {};
+        dragonnodejs(config, services);
         assert.equal(services.c, 'c', 'module should defined "c" as service "c"');
         assert.equal(services.d, 'd', 'module should defined "d" as service "d"');
     });
@@ -56,7 +60,8 @@ describe('dragonnode.js', function () {
                 }
             }
         };
-        var services = dragonnodejs(config);
+        var services = {};
+        dragonnodejs(config, services);
         assert.equal(services.services.c, 'c', 'module should defined "c" as service "services.c"');
         assert.equal(services.services.d, 'd', 'module should defined "d" as service "services.d"');
     });
@@ -66,16 +71,17 @@ describe('dragonnode.js', function () {
             npm: npm,
             modules: {
                 npm: {
-                    usemodule: {
+                    useconfig: {
                         c: 'c',
                         d: 'd'
                     }
                 }
             }
         };
-        var services = dragonnodejs(config);
-        assert.equal(services.module.c, 'c', 'module should have "c" from configuration');
-        assert.equal(services.module.d, 'd', 'module should have "d" from configuration');
+        var services = {};
+        dragonnodejs(config, services);
+        assert.equal(services.config.c, 'c', 'module should have "c" from configuration');
+        assert.equal(services.config.d, 'd', 'module should have "d" from configuration');
     });
 
     it('should allow a directory module to define services', function () {
@@ -85,7 +91,8 @@ describe('dragonnode.js', function () {
                 directory: { defineservices: {} }
             }
         };
-        var services = dragonnodejs(config);
+        var services = {};
+        dragonnodejs(config, services);
         assert.equal(services.a, 'a', 'module should defined "a" as service "a"');
         assert.equal(services.b, 'b', 'module should defined "b" as service "b"');
     });
@@ -100,7 +107,8 @@ describe('dragonnode.js', function () {
                 }
             }
         };
-        var services = dragonnodejs(config);
+        var services = {};
+        dragonnodejs(config, services);
         assert.equal(services.services.a, 'a', 'module should defined "a" as service "services.a"');
         assert.equal(services.services.b, 'b', 'module should defined "b" as service "services.b"');
     });
@@ -110,16 +118,17 @@ describe('dragonnode.js', function () {
             directory: './test/modules',
             modules: {
                 directory: {
-                    usemodule: {
+                    useconfig: {
                         a: 'a',
                         b: 'b'
                     }
                 }
             }
         };
-        var services = dragonnodejs(config);
-        assert.equal(services.module.a, 'a', 'module should have "a" from configuration');
-        assert.equal(services.module.b, 'b', 'module should have "b" from configuration');
+        var services = {};
+        dragonnodejs(config, services);
+        assert.equal(services.config.a, 'a', 'module should have "a" from configuration');
+        assert.equal(services.config.b, 'b', 'module should have "b" from configuration');
     });
 
     // TODO: Implement tests, problem: can't use the "." directory in "./test"

@@ -1,9 +1,8 @@
 /**
- * Testmodule to define services
+ * Example module for the application server
  * @param config
  * @param services
  */
 module.exports = function(config, services) {
-    services.c = 'c';
-    services.d = 'd';
+    // Implementation of the module
 };

@@ -5,30 +5,38 @@
 Develop modular and testable Node.js applications
 - Separate configuration and implementation of modules
 - Allow to define configurations depends on the environment
-- Service container to use services from other modules or define own services in the modules
+- Service container to use services from other modules or define new services in the modules
 - Allow to mock standard libraries and services for testing modules as independent units
-- Share: Publish own modules or use distributed modules from other developers
+- Use modules from other developers or publish new modules
 
 ## Installation
 - Fork and/or clone the skeleton repository
 
-## Define new modules
-- Add new file or directory to the module directory with the name of the new module, for example "./modules/module.js":
+## Define new module
+- Add new file or directory to the module directory with the name of the new module, for example "./modules/example.js":
 ```javascript
 /**
- * Module for the application server
+ * Example module for the application server
+ * @param config
  * @param services
- * @param module
  */
-module.exports = function(services, module) {
-    // Implementation for the module
+module.exports = function(config, services) {
+    // Implementation of the module
 };
 ```
 - Add the configuration for the different environments, for example "./configs/development.js":
 ```javascript
 /**
  * Development configuration for the application server
- * @type {{libraries: {}, directory: string, modules: {npm: {}, directory: {}}}}
+ * @type {
+ *      libraries: {},     // The libraries installed per NPM as "{ alias: name }"
+ *      npm: string,       // The path to "node_modules" directory used for the libraries and modules installed per NPM
+ *      directory: string, // The path to the directory with the modules of this project
+ *      modules: {
+ *          npm: {},       // The modules installed per NPM with his configurations as "{ name: config }"
+ *          directory: {}  // The modules of this project with his configurations as "{ name: config }"
+ *      }
+ * }
  */
 module.exports = {
     libraries: {},
@@ -36,8 +44,8 @@ module.exports = {
     modules: {
         npm: {},
         directory: {
-            module: {
-                // Configuration for the module
+            example: {
+                // Configuration of the module
             }
         }
     }

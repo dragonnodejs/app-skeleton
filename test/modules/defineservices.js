@@ -1,9 +1,9 @@
 /**
  * Testmodule to define services
+ * @param config
  * @param services
- * @param module
  */
-module.exports = function(services) {
+module.exports = function(config, services) {
     services.a = 'a';
     services.b = 'b';
 };

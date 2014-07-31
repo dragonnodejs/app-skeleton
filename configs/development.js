@@ -5,8 +5,8 @@
  *      npm: string,       // The path to "node_modules" directory used for the libraries and modules installed per NPM
  *      directory: string, // The path to the directory with the modules of this project
  *      modules: {
- *          npm: {},       // The Modules installed per NPM with his configurations as "{ name: module }"
- *          directory: {}  // The Modules of this project with his configurations as "{ name: module }"
+ *          npm: {},       // The modules installed per NPM with his configurations as "{ name: config }"
+ *          directory: {}  // The modules of this project with his configurations as "{ name: config }"
  *      }
  * }
  */
@@ -16,7 +16,9 @@ module.exports = {
     modules: {
         npm: {},
         directory: {
-            module: {}
+            example: {
+                // Configuration of the module
+            }
         }
     }
 };

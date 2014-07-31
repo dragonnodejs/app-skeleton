@@ -1,10 +1,10 @@
 /**
  * Load the libraries and modules with the configuration
  * @param config
- * @returns object
+ * @param services
  */
-module.exports = function (config) {
-    var services = {};
+module.exports = function (config, services) {
+    services = services || {};
     var npm = '';
     if (config.npm) {
         npm = config.npm + '/';
@@ -17,15 +17,14 @@ module.exports = function (config) {
     if (config.modules) {
         if (config.modules.npm) {
             for (var name in config.modules.npm) {
-                require(npm + name)(services, config.modules.npm[name]);
+                require(npm + name)(config.modules.npm[name], services);
             }
         }
         if (config.modules.directory) {
             var directory = config.directory || '.';
             for (var name in config.modules.directory) {
-                require(directory + '/' + name)(services, config.modules.directory[name]);
+                require(directory + '/' + name)(config.modules.directory[name], services);
             }
         }
     }
-    return services;
 };
