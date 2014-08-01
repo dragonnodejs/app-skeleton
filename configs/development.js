@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Development configuration for the application server
  * @type {

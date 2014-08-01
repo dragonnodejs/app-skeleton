@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Load the libraries and modules with the configuration
  * @param config

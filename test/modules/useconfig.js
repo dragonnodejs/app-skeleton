@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Testmodule to use the configuration of the module
  * @param config

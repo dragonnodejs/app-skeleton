@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Example module for the application server
  * @param config

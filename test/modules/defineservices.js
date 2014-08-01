@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Testmodule to define services
  * @param config
