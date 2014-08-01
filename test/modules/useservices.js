@@ -3,7 +3,7 @@
  * @param config
  * @param services
  */
-module.exports = function(config, services) {
+module.exports = function (config, services) {
     services.services = {
         a: services.a,
         b: services.b
