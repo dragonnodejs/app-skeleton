@@ -5,10 +5,7 @@
  */
 module.exports = function (config, services) {
     services = services || {};
-    var npm = '';
-    if (config.npm) {
-        npm = config.npm + '/';
-    }
+    var npm = config.npm || '';
     if (config.libraries) {
         for (var name in config.libraries) {
             services[name] = require(npm + config.libraries[name]);
@@ -23,7 +20,7 @@ module.exports = function (config, services) {
         if (config.modules.directory) {
             var directory = config.directory || '.';
             for (var name in config.modules.directory) {
-                require(directory + '/' + name)(config.modules.directory[name], services);
+                require(directory + name)(config.modules.directory[name], services);
             }
         }
     }

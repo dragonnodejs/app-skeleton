@@ -12,7 +12,7 @@
  */
 module.exports = {
     libraries: {},
-    directory: './modules',
+    directory: './modules/',
     modules: {
         npm: {},
         directory: {

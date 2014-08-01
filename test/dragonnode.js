@@ -3,7 +3,7 @@ var assert = require('assert');
 describe('dragonnode.js', function () {
 
     var dragonnodejs = require('../dragonnode.js');
-    var npm = './test/node_modules';
+    var npm = './test/node_modules/';
 
     it('should have the library in the service container after loading library', function () {
         var config = {
@@ -86,7 +86,7 @@ describe('dragonnode.js', function () {
 
     it('should allow a directory module to define services', function () {
         var config = {
-            directory: './test/modules',
+            directory: './test/modules/',
             modules: {
                 directory: { defineservices: {} }
             }
@@ -99,7 +99,7 @@ describe('dragonnode.js', function () {
 
     it('should give a directory module the defined services', function () {
         var config = {
-            directory: './test/modules',
+            directory: './test/modules/',
             modules: {
                 directory: {
                     defineservices: {},
@@ -115,7 +115,7 @@ describe('dragonnode.js', function () {
 
     it('should give a directory module his configuration', function () {
         var config = {
-            directory: './test/modules',
+            directory: './test/modules/',
             modules: {
                 directory: {
                     useconfig: {
@@ -134,7 +134,7 @@ describe('dragonnode.js', function () {
     it('should use "." if directory is not given in the configuration', function () {
         var config = {
             modules: {
-                directory: { 'test/modules/usedefaultdirectory': {} }
+                directory: { '/test/modules/usedefaultdirectory': {} }
             }
         };
         var services = {};
