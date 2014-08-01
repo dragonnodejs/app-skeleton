@@ -131,6 +131,14 @@ describe('dragonnode.js', function () {
         assert.equal(services.config.b, 'b', 'module should have "b" from configuration');
     });
 
-    // TODO: Implement tests, problem: can't use the "." directory in "./test"
-    xit('should use "." if directory is not given in the configuration', function () {});
+    it('should use "." if directory is not given in the configuration', function () {
+        var config = {
+            modules: {
+                directory: { 'test/modules/usedefaultdirectory': {} }
+            }
+        };
+        var services = {};
+        dragonnodejs(config, services);
+        assert.equal(services.ok, 'ok', 'module should defined "ok" as service "ok"');
+    });
 });
