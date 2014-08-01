@@ -2,23 +2,23 @@
 
 /**
  * Load the libraries and modules with the configuration
- * @param config
+ * @param environmentconfig
  * @param services
  */
-module.exports = function (config, services) {
+module.exports = function (environmentconfig, services) {
     services = services || {};
-    var npm = config.npm || '';
+    var npm = environmentconfig.npm || '';
 
-    for (var name in config.libraries) {
-        services[name] = require(npm + config.libraries[name]);
+    for (var name in environmentconfig.libraries) {
+        services[name] = require(npm + environmentconfig.libraries[name]);
     }
 
-    for (var name in config.modules.npm) {
-        require(npm + name)(config.modules.npm[name], services);
+    for (var name in environmentconfig.modules.npm) {
+        require(npm + name)(environmentconfig.modules.npm[name], services);
     }
 
-    var directory = config.directory || '.';
-    for (var name in config.modules.directory) {
-        require(directory + name)(config.modules.directory[name], services);
+    var directory = environmentconfig.directory || '.';
+    for (var name in environmentconfig.modules.directory) {
+        require(directory + name)(environmentconfig.modules.directory[name], services);
     }
 };

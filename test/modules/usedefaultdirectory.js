@@ -2,9 +2,9 @@
 
 /**
  * Testmodule to use the default directory
- * @param config
+ * @param moduleconfig
  * @param services
  */
-module.exports = function (config, services) {
+module.exports = function (moduleconfig, services) {
     services.ok = 'ok';
 };

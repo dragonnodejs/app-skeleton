@@ -17,10 +17,10 @@ Develop modular and testable Node.js applications
 ```javascript
 /**
  * Example module for the application server
- * @param config
+ * @param moduleconfig
  * @param services
  */
-module.exports = function (config, services) {
+module.exports = function (moduleconfig, services) {
     // Implementation of the module
 };
 ```

@@ -7,8 +7,8 @@
  *      npm: string,       // Path to "node_modules" directory for libraries and modules installed per NPM
  *      directory: string, // Path to directory with the modules of this project
  *      modules: {
- *          npm: {},       // Modules installed per NPM with configurations as "name: config"
- *          directory: {}  // Modules of this project with configurations as "name: config"
+ *          npm: {},       // Modules installed per NPM with configurations as "name: moduleconfig"
+ *          directory: {}  // Modules of this project with configurations as "name: moduleconfig"
  *      }
  * }
  */
