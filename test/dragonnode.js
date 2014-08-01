@@ -7,7 +7,8 @@ describe('dragonnode.js', function () {
 
     it('should have the library in the service container after loading library', function () {
         var config = {
-            libraries: { assert: 'assert' }
+            libraries: { assert: 'assert' },
+            modules: {}
         };
         var services = {};
         dragonnodejs(config, services);
@@ -16,7 +17,8 @@ describe('dragonnode.js', function () {
 
     it('should allow alias for a library', function () {
         var config = {
-            libraries: { alias: 'assert' }
+            libraries: { alias: 'assert' },
+            modules: {}
         };
         var services = {};
         dragonnodejs(config, services);
@@ -29,7 +31,8 @@ describe('dragonnode.js', function () {
             libraries: {
                 assert: 'assert',
                 alias: 'assert'
-            }
+            },
+            modules: {}
         };
         var services = {};
         dragonnodejs(config, services);

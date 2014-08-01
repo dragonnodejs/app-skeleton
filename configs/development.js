@@ -11,10 +11,8 @@
  * }
  */
 module.exports = {
-    libraries: {},
     directory: './modules/',
     modules: {
-        npm: {},
         directory: {
             example: {
                 // Configuration of the module
