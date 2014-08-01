@@ -29,20 +29,18 @@ module.exports = function (config, services) {
 /**
  * Development configuration for the application server
  * @type {
- *      libraries: {},     // The libraries installed per NPM as "{ alias: name }"
- *      npm: string,       // The path to "node_modules" directory used for the libraries and modules installed per NPM
- *      directory: string, // The path to the directory with the modules of this project
+ *      libraries: {},     // Libraries installed per NPM as "alias: name"
+ *      npm: string,       // Path to "node_modules" directory for libraries and modules installed per NPM
+ *      directory: string, // Path to directory with the modules of this project
  *      modules: {
- *          npm: {},       // The modules installed per NPM with the configurations as "{ name: config }"
- *          directory: {}  // The modules of this project with the configurations as "{ name: config }"
+ *          npm: {},       // Modules installed per NPM with configurations as "name: config"
+ *          directory: {}  // Modules of this project with configurations as "name: config"
  *      }
  * }
  */
 module.exports = {
-    libraries: {},
-    directory: './modules',
+    directory: './modules/',
     modules: {
-        npm: {},
         directory: {
             example: {
                 // Configuration of the module
