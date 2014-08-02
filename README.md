@@ -2,7 +2,7 @@
     (https://travis-ci.org/dragonnodejs/skeleton)
 
 # DragonNode.js
-Develop modular and testable Node.js applications
+Framework to develop modular and testable Node.js applications
 - Separate configuration and implementation of modules
 - Allow to define configurations depends on the environment
 - Service container to use services from other modules or define new services in the modules
