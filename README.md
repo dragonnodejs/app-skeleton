@@ -1,6 +1,3 @@
-[![Travis CI](https://travis-ci.org/dragonnodejs/skeleton.svg?branch=master "Travis CI")]
-    (https://travis-ci.org/dragonnodejs/skeleton)
-
 # DragonNode.js
 Framework to develop modular and testable Node.js applications
 - Separate configuration and implementation of modules

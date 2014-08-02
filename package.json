@@ -1,13 +1,9 @@
 {
     "scripts": {
-        "start": "node app.js",
-        "test": "mocha -R spec"
+        "start": "node app.js"
     },
     "dependencies": {
         "dragonnodejs": "*"
-    },
-    "devDependencies": {
-        "mocha": "*"
     },
     "repository": {
         "type": "git",
