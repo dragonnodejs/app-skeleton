@@ -4,8 +4,8 @@
  * Development configuration for the application server
  * @type {
  *      libraries: {},     // Libraries installed per NPM as "alias: name"
- *      npm: string,       // Path to "node_modules" directory for libraries and modules installed per NPM
- *      directory: string, // Path to directory with the modules of this project
+ *      npm: string,       // Absolute path to "node_modules" directory for libraries and modules installed per NPM
+ *      directory: string, // Absolute path to directory with the modules of this project
  *      modules: {
  *          npm: {},       // Modules installed per NPM with configurations as "name: moduleconfig"
  *          directory: {}  // Modules of this project with configurations as "name: moduleconfig"
