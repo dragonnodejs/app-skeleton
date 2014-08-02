@@ -13,7 +13,7 @@
  * }
  */
 module.exports = {
-    directory: './modules/',
+    directory: __dirname + '/../modules/',
     modules: {
         directory: {
             example: {

@@ -39,7 +39,7 @@ module.exports = function (moduleconfig, services) {
  * }
  */
 module.exports = {
-    directory: './modules/',
+    directory: __dirname + '/../modules/',
     modules: {
         directory: {
             example: {
@@ -51,7 +51,7 @@ module.exports = {
 ```
 
 ## Define new environments
-- Add new configuration with the environment name into the "./configs" directory
+- Add new configuration with the environment name into the "./configs/" directory
 - Start the application with the new environment
 ```
 NODE_ENV=environment npm start

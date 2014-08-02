@@ -3,7 +3,9 @@
         "start": "node app.js",
         "test": "mocha -R spec"
     },
-    "dependencies": {},
+    "dependencies": {
+        "dragonnodejs": "*"
+    },
     "devDependencies": {
         "mocha": "*"
     },
