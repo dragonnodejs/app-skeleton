@@ -9,16 +9,22 @@ module.exports = function (environmentconfig, services) {
     services = services || {};
     var npm = environmentconfig.npm || '';
 
-    for (var name in environmentconfig.libraries) {
-        services[name] = require(npm + environmentconfig.libraries[name]);
+    for (var alias in environmentconfig.libraries) {
+        var name = environmentconfig.libraries[alias];
+
+        services[alias] = require(npm + name);
     }
 
     for (var name in environmentconfig.modules.npm) {
-        require(npm + name)(environmentconfig.modules.npm[name], services);
+        var moduleconfig = environmentconfig.modules.npm[name];
+
+        require(npm + name)(moduleconfig, services);
     }
 
     var directory = environmentconfig.directory || '.';
     for (var name in environmentconfig.modules.directory) {
-        require(directory + name)(environmentconfig.modules.directory[name], services);
+        var moduleconfig = environmentconfig.modules.directory[name];
+
+        require(directory + name)(moduleconfig, services);
     }
 };
