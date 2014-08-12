@@ -4,7 +4,7 @@ Framework to develop modular and testable Node.js applications
 - Allow to define configurations depends on the environment
 - Service container to use services from other modules or define new services in the modules
 - Allow to mock standard libraries and services for testing modules as independent units
-- Use modules from other developers or publish new modules
+- Group modules to bundles and share them with other developers
 
 ## Installation
 - Fork and/or clone the skeleton repository
@@ -26,7 +26,10 @@ module.exports = function (moduleconfig, services) {
 /**
  * Development configuration for the application server
  * @type {
- *      libraries: {},     // Libraries installed per NPM as "alias: name"
+ *      libraries: {
+ *          nodejs: {},    // Libraries included in Node.js as "alias: name"
+ *          npm: {}        // Libraries installed per NPM as "alias: name"
+ *      },
  *      npm: string,       // Absolute path to "node_modules" directory for libraries and modules installed per NPM
  *      directory: string, // Absolute path to directory with the modules of this project
  *      modules: {
@@ -36,6 +39,7 @@ module.exports = function (moduleconfig, services) {
  * }
  */
 module.exports = {
+    libraries: {},
     directory: __dirname + '/../modules/',
     modules: {
         directory: {
