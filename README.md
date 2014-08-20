@@ -23,26 +23,9 @@ module.exports = function (moduleconfig, services) {
     // Implementation of the module
 };
 ```
-- Add the configuration for the different environments, for example "./configs/development.js":
+- Extend the configuration for the different environments, for example "./configs/development.js":
 ```javascript
-/**
- * Development configuration for the application server
- * @type {
- *      libraries: {
- *          nodejs: {},    // Libraries included in Node.js as "alias: name"
- *          npm: {}        // Libraries installed per NPM as "alias: name"
- *      },
- *      npm: string,       // Absolute path to "node_modules" directory for libraries and modules installed per NPM
- *      directory: string, // Absolute path to directory with the modules of this project
- *      modules: {
- *          npm: {},       // Modules installed per NPM with configurations as "name: config"
- *          directory: {}  // Modules of this project with configurations as "name: config"
- *      }
- * }
- */
 module.exports = {
-    libraries: {},
-    directory: __dirname + '/../modules/',
     modules: {
         directory: {
             example: {
