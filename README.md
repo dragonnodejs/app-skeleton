@@ -8,6 +8,8 @@ Framework to develop modular and testable Node.js applications
 
 ## Installation
 - Fork and/or clone the skeleton repository
+- Execute "npm install"
+- Start the application with "npm start"
 
 ## Define new module
 - Add new file or directory to the module directory with the name of the new module, for example "./modules/example.js":
@@ -51,7 +53,7 @@ module.exports = {
 };
 ```
 
-## Define new environments
+## Define new environment
 - Add new configuration with the environment name into the "./configs/" directory
 - Start the application with the new environment
 ```
