@@ -42,3 +42,20 @@ module.exports = {
 ```
 NODE_ENV=environment npm start
 ```
+
+## Changelog
+
+### 2.1.0
+Minor:
+- Feature: Add default configuration for production environment which inherit from the development configuration
+Trivial:
+- Change: Remove the entries from ".gitignore" for PhpStorm. So if you using PhpStorm in your project you must define
+itself
+
+### 2.0.0
+Major:
+- Feature: Add define libraries included in Node.js. So need to split the library configuration to "nodejs" and "npm".
+Also need to define the library configuration as empty object if no library is needed instead of not define the complete
+library configuration
+Trivial:
+- Feature: Use specific compatible versions of the library to avoid automatic update to new major version if available
