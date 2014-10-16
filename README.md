@@ -19,7 +19,7 @@ Framework to develop modular and testable Node.js applications
     example: {}
  */
 
-module.exports = function (moduleconfig, services) {
+module.exports = function (config, services) {
     // implementation of the module
 };
 ```

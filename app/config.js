@@ -10,8 +10,8 @@
  *      },
  *      directory: string, // absolute path to directory with the modules of this project
  *      modules: {
- *          npm: {},       // modules installed per NPM with their configuration as "name: moduleconfig"
- *          directory: {}  // modules of this project with their configuration as "name: moduleconfig"
+ *          npm: {},       // modules installed per NPM with their configuration as "name: config"
+ *          directory: {}  // modules of this project with their configuration as "name: config"
  *      }
  * }
  */

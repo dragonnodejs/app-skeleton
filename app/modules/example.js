@@ -6,6 +6,6 @@
     example: {}
  */
 
-module.exports = function (moduleconfig, services) {
+module.exports = function (config, services) {
     // implementation of the module
 };
