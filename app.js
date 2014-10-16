@@ -1,6 +1,5 @@
 "use strict";
 
-// Determine the environment and load the libraries and modules with the configuration
+// load the libraries and modules
 
-var environment = process.env.NODE_ENV || 'development';
-require('dragonnodejs')(require('./configs/' + environment));
+require('dragonnodejs')(require('./config'));

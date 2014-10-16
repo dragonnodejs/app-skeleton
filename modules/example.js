@@ -1,10 +1,7 @@
 "use strict";
 
-/**
- * Example module for the application server
- * @param moduleconfig
- * @param services
- */
+// example module
+
 module.exports = function (moduleconfig, services) {
-    // Implementation of the module
+    // implementation of the module
 };

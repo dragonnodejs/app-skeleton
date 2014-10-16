@@ -1,7 +1,6 @@
 # DragonNode.js
 Framework to develop modular and testable Node.js applications
 - Separate configuration and implementation of modules
-- Allow to define configurations depends on the environment
 - Service container to use services from other modules or define new services in the modules
 - Allow to mock standard libraries and services for testing modules as independent units
 - Group modules to bundles and share them with other developers
@@ -14,13 +13,10 @@ Framework to develop modular and testable Node.js applications
 ## Define new module
 - Add new file or directory to the module directory with the name of the new module, for example "./modules/example.js":
 ```javascript
-/**
- * Example module for the application server
- * @param moduleconfig
- * @param services
- */
+// example module
+
 module.exports = function (moduleconfig, services) {
-    // Implementation of the module
+    // implementation of the module
 };
 ```
 - Extend the configuration for the different environments, for example "./configs/development.js":
@@ -29,21 +25,18 @@ module.exports = {
     modules: {
         directory: {
             example: {
-                // Configuration of the module
+                // configuration of the module
             }
         }
     }
 };
 ```
 
-## Define new environment
-- Add new configuration with the environment name into the "./configs/" directory
-- Start the application with the new environment
-```
-NODE_ENV=environment npm start
-```
-
 ## Changelog
+
+### 2.2.0
+Minor:
+- Change: Remove the environment configurations
 
 ### 2.1.0
 Minor:
