@@ -18,7 +18,7 @@
 
 module.exports = {
     libraries: {},
-    directory: __dirname + '/../modules/',
+    directory: __dirname + '/modules/',
     modules: {
         directory: {
             example: {
