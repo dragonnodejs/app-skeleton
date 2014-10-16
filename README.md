@@ -13,7 +13,11 @@ Framework to develop modular and testable Node.js applications
 ## Define new module
 - Add new file or directory to the module directory with the name of the new module, for example "./modules/example.js":
 ```javascript
-// example module
+/*
+ * description of the module
+ * @example
+    example: {}
+ */
 
 module.exports = function (moduleconfig, services) {
     // implementation of the module
