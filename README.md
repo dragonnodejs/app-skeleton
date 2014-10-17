@@ -14,13 +14,13 @@ Framework to develop modular and testable Node.js applications
 - Add new file or directory to the module directory with the name of the new module, for example "./modules/example.js":
 ```javascript
 /*
- * description of the module
+ * Description for the module
  * @example
     example: {}
  */
 
 module.exports = function (config, services) {
-    // implementation of the module
+    // Implementation for the module
 };
 ```
 - Extend the configuration for the different environments, for example "./configs/development.js":
@@ -29,7 +29,7 @@ module.exports = {
     modules: {
         directory: {
             example: {
-                // configuration of the module
+                // Configuration for the module
             }
         }
     }

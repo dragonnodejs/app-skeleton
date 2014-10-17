@@ -1,7 +1,7 @@
 "use strict";
 
 /*
- * configuration for the application
+ * Configuration for the application
  * @type {
  *      npm: string,       // absolute path to "node_modules" directory for libraries and modules installed per NPM
  *      libraries: {
@@ -22,7 +22,7 @@ module.exports = {
     modules: {
         directory: {
             example: {
-                // configuration of the module
+                // Configuration for the module
             }
         }
     }

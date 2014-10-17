@@ -1,11 +1,11 @@
 "use strict";
 
 /*
- * description of the module
+ * Description for the module
  * @example
     example: {}
  */
 
 module.exports = function (config, services) {
-    // implementation of the module
+    // Implementation for the module
 };
