@@ -17,7 +17,7 @@
  */
 
 module.exports = {
-    npm: __dirname + '/node_modules/',
+    npm: __dirname + '/../node_modules/',
     libraries: {},
     directory: __dirname + '/modules/',
     modules: {
