@@ -3,20 +3,21 @@
 /*
  * Configuration for the application
  * @type {
- *      npm: string,       // Absolute path to "node_modules" directory for libraries and modules installed per NPM
+ *      npm: '',           // Absolute path to "node_modules" directory for NPM installed libraries and modules
  *      libraries: {
- *          nodejs: {},    // Libraries included in Node.js as "alias: name"
- *          npm: {}        // Libraries installed per NPM as "alias: name"
+ *          nodejs: {},    // Node.js included libraries as "alias: name"
+ *          npm: {}        // NPM installed libraries as "alias: name"
  *      },
- *      directory: string, // Absolute path to directory with the modules of this project
+ *      directory: '',     // Absolute path to directory with the application/bundle modules
  *      modules: {
- *          npm: {},       // Modules installed per NPM with their configuration as "name: config"
- *          directory: {}  // Modules of this project with their configuration as "name: config"
+ *          npm: {},       // NPM installed modules with the configuration as "name: config"
+ *          directory: {}  // Modules of the directory with the configuration as "name: config"
  *      }
  * }
  */
 
 module.exports = {
+    npm: __dirname + '/node_modules/',
     libraries: {},
     directory: __dirname + '/modules/',
     modules: {
