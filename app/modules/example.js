@@ -1,6 +1,6 @@
 "use strict";
 
-/*
+/**
  * Description for the module
  * @example
     example: {}
