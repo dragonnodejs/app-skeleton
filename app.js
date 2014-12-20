@@ -1,9 +1,9 @@
 "use strict";
 
-// Configuration for the application
+// Load the libraries and modules
 
-module.exports = {
-    npm: __dirname + '/../node_modules/',
+var config = {
+    npm: __dirname + '/node_modules/',
     libraries: {
         nodejs: {},
         npm: {}
@@ -18,3 +18,4 @@ module.exports = {
         }
     }
 };
+require('dragonnodejs')(config);

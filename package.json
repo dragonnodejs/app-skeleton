@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "node app/app.js"
+        "start": "node app.js"
     },
     "dependencies": {
         "dragonnodejs": "3.*"
