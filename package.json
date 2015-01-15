@@ -3,7 +3,7 @@
         "start": "node app.js"
     },
     "dependencies": {
-        "dragonnodejs": "3.*"
+        "dragonnodejs": "~3.0.3"
     },
     "repository": {
         "type": "git",
