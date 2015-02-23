@@ -1,5 +1,4 @@
 "use strict";
-/*global module:false */
 
 /**
  * Description for the module
