@@ -1,9 +1,10 @@
 {
     "scripts": {
-        "start": "node app.js"
+        "start": "node cluster.js"
     },
     "dependencies": {
-        "dragonnodejs": "^4.0.4"
+        "dragonnodejs": "^4.0.4",
+        "throng": "^1.0.0"
     },
     "repository": {
         "type": "git",
