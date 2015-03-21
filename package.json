@@ -1,11 +1,15 @@
 {
     "scripts": {
-        "start": "node cluster.js"
+        "start": "node cluster.js",
+        "forever": "./node_modules/forever/bin/forever -w app.js"
     },
     "dependencies": {
         "dragonnodejs": "^4.0.4",
         "newrelic": "^1.15.1",
         "throng": "^1.0.0"
+    },
+    "devDependencies": {
+        "forever": "^0.14.1"
     },
     "repository": {
         "type": "git",
