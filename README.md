@@ -5,5 +5,5 @@
 - Git clone the repository [dragonnodejs/app-skeleton](https://github.com/dragonnodejs/app-skeleton.git)
 - Open terminal, switch to the directory and execute:
   - npm install
-  - npm run forever
+  - npm run nodemon
 - Git commit/push into the master after changes
