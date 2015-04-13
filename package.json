@@ -1,7 +1,7 @@
 {
     "scripts": {
         "start": "node cluster.js",
-        "nodemon": "./node_modules/nodemon/bin/nodemon.js --watch app.js --watch modules app.js",
+        "start-watch": "./node_modules/nodemon/bin/nodemon.js --watch app.js --watch modules app.js",
         "test": "mocha -R spec"
     },
     "dependencies": {
