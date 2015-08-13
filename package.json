@@ -1,4 +1,11 @@
 {
+    "name": "app-skeleton",
+    "description": "Skeleton for an application with the DragonNode.js Framework",
+    "version": "1.0.0",
+    "homepage": "http://github.com/dragonnodejs/app-skeleton",
+    "license": "MIT",
+    "author": "Christoph Herrmann <developer@dragonprojects.de>",
+    "readmeFilename": "README.md",
     "scripts": {
         "start": "node cluster.js",
         "start-watch": "./node_modules/nodemon/bin/nodemon.js --watch app.js --watch modules app.js",
