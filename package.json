@@ -5,9 +5,10 @@
     "homepage": "http://github.com/dragonnodejs/app-skeleton",
     "license": "MIT",
     "readmeFilename": "README.md",
+    "main": "app.js",
     "scripts": {
         "start": "node cluster.js",
-        "start-watch": "./node_modules/nodemon/bin/nodemon.js --watch app.js --watch modules app.js",
+        "start-watch": "nodemon --watch modules app.js",
         "test": "mocha -R spec"
     },
     "dependencies": {
