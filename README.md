@@ -7,6 +7,6 @@
 
     ```npm install```
 
-    ```PORT=%PORT% npm run start-watch```
+    ```npm run start-watch```
 
 - Git commit/push into the master after changes
