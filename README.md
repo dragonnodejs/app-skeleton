@@ -1,4 +1,5 @@
 # DragonNode.js App Skeleton
+Skeleton for an application with the DragonNode.js Framework
 
 ## Development
 - Install [Node.js](http://nodejs.org/)
