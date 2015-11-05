@@ -1,7 +1,7 @@
 {
   "name": "app-skeleton",
   "description": "Skeleton for an application with the DragonNode.js Framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "http://github.com/dragonnodejs/app-skeleton",
   "license": "MIT",
   "readmeFilename": "README.md",
