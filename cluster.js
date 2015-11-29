@@ -3,7 +3,7 @@
 // Cluster the application depends on the environment
 
 require('throng')(
-    () => { require('./app') },
+    () => { require('./app'); },
     {
         workers: process.env.WEB_CONCURRENCY,
         lifetime: Infinity

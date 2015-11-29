@@ -1,23 +1,23 @@
 {
   "name": "app-skeleton",
-  "description": "Skeleton for an application with the DragonNode.js Framework",
-  "version": "1.0.1",
+  "description": "Skeleton for an application with the DragonNode.js framework",
+  "version": "1.0.0",
   "homepage": "http://github.com/dragonnodejs/app-skeleton",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "main": "app.js",
+  "main": "app",
   "scripts": {
     "start": "node cluster.js",
-    "start-watch": "nodemon --watch modules app.js",
-    "test": "mocha -R spec"
+    "test": "mocha -R spec",
+    "watch": "nodemon --watch modules app.js"
   },
   "dependencies": {
-    "dragonnodejs": "^5.0.1",
-    "newrelic": "^1.23.0",
+    "dragonnodejs": "^6.0.0",
+    "newrelic": "^1.24.0",
     "throng": "^1.0.1"
   },
   "devDependencies": {
-    "mocha": "^2.3.3",
+    "mocha": "^2.3.4",
     "nodemon": "^1.8.1"
   },
   "repository": {

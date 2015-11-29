@@ -3,9 +3,9 @@
 /**
  * Description for the module
  * @example
-    ['modules/example', {
+    ['example',
         // Configuration for the module
-    }]
+    ]
  */
 
 module.exports = (config, libraries, services) => {
